@@ -1,0 +1,9 @@
+$(render_partial "layout/header.html")
+<h1>Data from a sqlite3 DB</h1>
+<ul>
+$(for user in $USERS; do
+  IFS=','; user_attrs=($user); unset IFS;
+  echo "<li>id: ${user_attrs[0]}, name: ${user_attrs[1]}</li>"
+done)
+</ul>
+$(render_partial "layout/footer.html")

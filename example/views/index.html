@@ -1,0 +1,17 @@
+$(render_partial "layout/header.html")
+<h1>OK</h1>
+<b>$PORT</b>
+<h3>Request Headers</h3>
+<ul>
+$(for header in "${!REQUEST_HEADERS[@]}"; do
+echo "<li>$header: ${REQUEST_HEADERS[$header]}</li>"
+done)
+</ul>
+<h3>Query</h3>
+<ul>
+$(for q in "${!QUERY[@]}"; do
+echo "<li>$q: ${QUERY[$q]}</li>"
+done)
+</ul>
+<pre>$(ifconfig)</pre>
+$(render_partial "layout/footer.html")
