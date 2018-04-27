@@ -22,13 +22,5 @@ Just run `cd example && ../server.sh app.sh` that is all! So easy!
 - Only support `GET` requests
 - Doesn't *quite* accept multiple requests at a time
 
-# Project Layout
-- `server.sh` : Application entrypoint, listens and serves requests.
-- `app.sh` : request handler definitions. Put all of your app logic here.
-- `config.sh` : A good spot to put all of your confidential config.
-- `db.sh` : defines the interface to the sqlite database.
-- `views` : directory where your dynamic html templates are!
-
-
 # Seriously
 This is a joke, don't develop your application with bash.
